@@ -15,9 +15,10 @@
 #     Evaluate the sum of all the amicable numbers under 10000.
 
 from math import floor, sqrt
+from typing import List, Tuple
 
 
-def main(n):
+def main(n: int) -> Tuple[int, List[Tuple[int, int]]]:
     """
     Returns the sum of all amicable numbers less than `n`,
       and a list of the actual amicable pairs.
@@ -26,8 +27,13 @@ def main(n):
         n (int): Natural number
 
     Returns:
-        Sum of amicable numbers less than `n`,
-          and list of amicable pairs.
+        (Tuple[int, List[Tuple[int, int]]]):
+            Tuple of ...
+              * Sum of amicable numbers less than `n`
+              * List of all such amicable pairs
+
+    Raises:
+        AssertError: if incorrect args are given
     """
     assert type(n) == int and n > 0
 
